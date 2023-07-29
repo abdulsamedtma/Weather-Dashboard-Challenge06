@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <!--Bootstrap CSS CDN-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!--Jumbotron for Title-->
+    <div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color:#404040 ;color: white;">
+        <h1> <strong>Weather Dashboard</strong></h1>
+
+    </div>
+    <div class="container">
+        <!--Row for searching a city-->
+        <div class="row">
+            <div class="col-sm-4 bg-light">
+                <!--Here I created an HTML form for handling the inputs-->
+                <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+                <!--Here we create the text box for capturing the search city Name-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="search-city" aria-label="City Search"
+                        aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button class=" btn bg-primary text-light" id="search-button"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <!--section for search city history-->
+                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+                <ul class="list-group" id="search-history-list">
+
+                </ul>
+            </div>
+            <div class="col-sm-8">
+                <div class="row ml-2 border border-dark rounded">
+                    <div class="col-sm-12" id="current-weather">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                        <h4 class="current-date mb-1 mt-2 bolder" id="current-date"></h4>
+                        <img src="" id="current-icon">
+                        <p>Temperature:<span class="current" id="temperature"></span></p>
+                        <p>Humidity:<span class="current" id="humidity"></span></p>
+                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                    </div>
+                </div>
+                <!--Row for future data to be dumped here-->
+                <div class="col-sm-12" id="future-weather">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row text-light">
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate0" class="forecast-date0"></p>
+                            <img src="" id="forecast-icon0" class="forecast-icon0">
+                            <p>Temp:<span id="finalTemp0" class="forecast-temp0"></span></p>
+                            <p>Humidity:<span id="finalHumidity0" class="forecast-humidity0"></span></p>
+                            <p>Wind Speed:<span id="fWindSpeed0" class="forecast-windspeed0"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate1" class="forecast-date1"></p>
+                            <img src="" id="forecast-icon1" class="forecast-icon0">
+                            <p>Temp:<span id="finalTemp1" class="forecast-temp0"></span></p>
+                            <p>Humidity:<span id="finalHumidity1" class="forecast-humidity1"></span></p>
+                            <p>Wind Speed:<span id="fWinSpeed" class="forecast-windspeed1"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate2" class="forecast-date2"></p>
+                            <img src="" id="forecast-icon02" class="forecast-icon2">
+                            <p>Temp:<span id="finalTemp2" class="forecast-temp2"></span></p>
+                            <p>Humidity:<span id="finalHumidity2" class="forecast-humidity2"></span></p>
+                            <p>Wind Speed:<span id="fWindSpeed2" class="forecast-windspeed2"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate3" class="forecast-date3"></p>
+                            <img src="" id="forecast-icon3" class="forecast-icon3">
+                            <p>Temp:<span id="finalTemp3" class="forecast-temp3"></span></p>
+                            <p>Humidity:<span id="finalHumidity3" class="forecast-humidity3"></span></p>
+                            <p>Wind Speed:<span id="fWindSpeed3" class="forecast-windspeed3"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate4" class="forecast-date4"></p>
+                            <img src="" id="forecast-icon4" class="forecast-icon4">
+                            <p>Temp:<span id="finalTemp4" class="forecast-temp4"></span></p>
+                            <p>Humidity:<span id="finalHumidity4" class="forecast-humidity4"></span></p>
+                            <p>Wind Speed:<span id="fWindSpeed4" class="forecast-windspeed4"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="mt-5 p-3 text-center bg-light">
+        Weather Dashboard &copy 2023
+        <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        Made With<i class="icon ion-heart"></i> By
+        <a href="https://github.com/abdulsamedtma" target="blank">
+            Abdul Samed Alhassan </a>
+    </footer>
+
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+
+    <!--Code to Jvascript File-->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

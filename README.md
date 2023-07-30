@@ -22,15 +22,14 @@ Ultimately, the goal of this project is to .
 
 Congratulations! You have successfully launched the weather dashboard.
 
-![Alt text](assets/images/current.png)
-
+[Alt text](assets/images/Current%20forecast.png)
 
 ## Usage
 
 Weather Dashboard.
 
 . Open the index.html file in a web browser.
-. input the city name and Click on the "search icon" button.
+. Input the city name and click on the "search icon" button.
 . The current weather condition and 5 day forecast of the said city will be displayed on the screen.
 
 ## Credit
@@ -60,3 +59,5 @@ Contributions are always welcome! But please read the contribution guidelines fi
 ## Test
 
 Page URL http://127.0.0.1:5500/index.html Page deployed application URL Coming soon!
+
+                                  ✨  Every day is a learning day!  ✨

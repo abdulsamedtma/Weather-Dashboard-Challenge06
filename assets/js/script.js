@@ -20,8 +20,7 @@ const get5DayForecast = (cityName) => {
 
 // Function to display current weather data on the page
 const displayCurrentWeather = (weatherData) => {
-    const currentDate = dayjs().format("dddd, MMMMM D YYYY h:mm A");
-
+    const currentDate = dayjs().format("dddd, MMMM D YYYY h:mm A");
     const city = weatherData.name;
     const date = currentDate;
     const temperature = weatherData.main.temp;
@@ -41,11 +40,14 @@ const displayCurrentWeather = (weatherData) => {
 // Function to display 5-day forecast data on the page
 const display5DayForecast = (forecastData) => {
     const forecastElements = document.querySelectorAll(".forecast");
+    const filterForecast = forecastData.list.filter((row) => {
+      const currentDate = dayjs().format("dddd, MMMM D YYYY h:mm A");
+       return row.dt_txt >= currentDate ; 
+    })
 
     // Loop through each forecast element and update the data
     forecastElements.forEach((forecastElement, index) => {
         const date = forecastData.list[index].dt_txt.split(" ")[0];
-        console.log(date)
         const temperature = forecastData.list[index].main.temp;
         const humidity = forecastData.list[index].main.humidity;
         const icon = forecastData.list[index].weather[0].icon;

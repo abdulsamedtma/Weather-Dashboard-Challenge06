@@ -58,6 +58,6 @@ Contributions are always welcome! But please read the contribution guidelines fi
 
 ## Test
 
-Page URL http://127.0.0.1:5500/index.html Page deployed application URL Coming soon!
+Page URL http://127.0.0.1:5500/index.html Page deployed application URL https://abdulsamedtma.github.io/weather-dashboard-challenge06/
 
                                   ✨  Every day is a learning day!  ✨
